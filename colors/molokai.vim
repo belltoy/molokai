@@ -316,9 +316,6 @@ hi link GitSignsChange GitSignsStagedChange
 hi link GitSignsDelete GitSignsStagedDelete
 hi GitSignsUntracked guifg=#fd971f
 
-hi BufferLineHintSelected guibg=#afdf00 guifg=#4581FF
-hi BufferLineWarningSelected guifg=#B3800C
-
 " hi link DiagnosticError ErrorMsg
 hi DiagnosticError guifg=#f92672
 hi DiagnosticHint guifg=#8cf8f7
