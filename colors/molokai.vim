@@ -92,7 +92,7 @@ hi CurSearch       guifg=#005F00 guibg=#AFDF00 gui=bold
 hi SignColumn      guifg=#A6E22E guibg=#181818
 hi SpecialChar     guifg=#F92672               gui=bold
 hi SpecialComment  guifg=#7E8E91               gui=bold
-hi Special         guifg=#66D9EF guibg=bg      gui=none
+hi Special         guifg=#66D9EF               gui=none
 
 if has("spell")
     hi SpellBad    guisp=#FF0000 gui=undercurl
