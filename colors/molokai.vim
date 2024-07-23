@@ -279,7 +279,7 @@ if &t_Co > 255
    endif
 end
 
-hi link IncSearch CurSearch
+hi! link IncSearch CurSearch
 
 hi WinSeparator guifg=#2E2E2E guibg=#1B1D1E
 hi! link NormalFloat Normal
