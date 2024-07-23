@@ -76,7 +76,6 @@ hi Question        guifg=#66D9EF
 hi Repeat          guifg=#F92672               gui=bold
 hi Search          guifg=#000000 guibg=#FFE792
 hi CurSearch       guifg=#005F00 guibg=#AFDF00 gui=bold
-hi link IncSearch CurSearch
 
 " marks
 hi SignColumn      guifg=#A6E22E guibg=#181818
@@ -166,7 +165,7 @@ if &t_Co > 255
    hi DiffAdd                     ctermbg=24
    hi DiffChange      ctermfg=181 ctermbg=239
    hi DiffDelete      ctermfg=162 ctermbg=53
-   hi DiffText                    ctermbg=102 cterm=bold
+   hi DiffText                    ctermbg=102   cterm=bold
 
    hi Directory       ctermfg=118               cterm=bold
    hi Error           ctermfg=219 ctermbg=89
@@ -279,6 +278,8 @@ if &t_Co > 255
        hi SpecialKey      ctermfg=239
    endif
 end
+
+hi link IncSearch CurSearch
 
 hi WinSeparator guifg=#2E2E2E guibg=#1B1D1E
 hi! link NormalFloat Normal
