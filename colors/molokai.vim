@@ -35,15 +35,12 @@ hi Conditional     guifg=#F92672               gui=bold
 hi Constant        guifg=#AE81FF               gui=bold
 hi Cursor          guifg=#000000 guibg=#F8F8F0
 hi iCursor         guifg=#000000 guibg=#F8F8F0
-hi Debug           guifg=#BCA3A3               gui=bold
+hi Debug           guifg=#BCA3A3 gui=bold
 hi Define          guifg=#66D9EF
 hi Delimiter       guifg=#8F8F8F
-" hi DiffAdd                       guibg=#13354A
-" hi DiffChange      guifg=#89807D guibg=#4C4745
-" hi DiffDelete      guifg=#960050 guibg=#1E0010
-hi DiffAdd         guifg=#f0cdc9     guibg=#567c44
-hi DiffChange      guifg=#fefefe     guibg=#404ea4
-hi DiffDelete      guifg=#c3c3c3     guibg=#a22e26 gui=bold
+hi DiffAdd         guifg=#F0CDC9 guibg=#567C44
+hi DiffChange      guifg=#FEFEFE guibg=#404EA4
+hi DiffDelete      guifg=#C3C3C3 guibg=#A22E26 gui=bold
 hi DiffText                      guibg=#4C4745 gui=italic,bold
 
 hi Directory       guifg=#A6E22E               gui=bold
@@ -51,18 +48,16 @@ hi Error           guifg=#E6DB74 guibg=#1E0010
 hi ErrorMsg        guifg=#F92672 guibg=#232526 gui=bold
 hi Exception       guifg=#A6E22E               gui=bold
 hi Float           guifg=#AE81FF
-" hi FoldColumn      guifg=#465457 guibg=#000000
 hi FoldColumn      guifg=#465457 guibg=#181818
 hi Folded          guifg=#465457 guibg=#000000
 hi Function        guifg=#A6E22E
 hi Identifier      guifg=#FD971F
 hi Ignore          guifg=#808080 guibg=bg
-" hi IncSearch       guifg=#C4BE89 guibg=#000000
 
 hi Keyword         guifg=#F92672               gui=bold
 hi Label           guifg=#E6DB74               gui=none
-hi Macro           guifg=#C4BE89               gui=italic
-hi SpecialKey      guifg=#66D9EF               gui=italic
+hi Macro           guifg=#C4BE89               gui=none
+hi SpecialKey      guifg=#66D9EF               gui=bold
 
 hi MatchParen      guifg=#000000 guibg=#FD971F gui=bold
 hi ModeMsg         guifg=#E6DB74
@@ -80,12 +75,14 @@ hi PreProc         guifg=#A6E22E
 hi Question        guifg=#66D9EF
 hi Repeat          guifg=#F92672               gui=bold
 hi Search          guifg=#000000 guibg=#FFE792
+hi CurSearch       guifg=#005F00 guibg=#AFDF00 gui=bold
+hi link IncSearch CurSearch
+
 " marks
-" hi SignColumn      guifg=#A6E22E guibg=#232526
 hi SignColumn      guifg=#A6E22E guibg=#181818
 hi SpecialChar     guifg=#F92672               gui=bold
 hi SpecialComment  guifg=#7E8E91               gui=bold
-hi Special         guifg=#66D9EF guibg=bg      gui=italic
+hi Special         guifg=#66D9EF guibg=bg      gui=none
 if has("spell")
     hi SpellBad    guisp=#FF0000 gui=undercurl
     hi SpellCap    guisp=#7070F0 gui=undercurl
@@ -95,10 +92,10 @@ endif
 hi Statement       guifg=#F92672               gui=bold
 hi StatusLine      guifg=#455354 guibg=fg
 hi StatusLineNC    guifg=#808080 guibg=#080808
-hi StorageClass    guifg=#FD971F               gui=italic
+hi StorageClass    guifg=#FD971F               gui=none
 hi Structure       guifg=#66D9EF
 hi Tag             guifg=#F92672               gui=italic
-hi Title           guifg=#ef5939
+hi Title           guifg=#EF5939
 hi Todo            guifg=#FFFFFF guibg=bg      gui=bold
 
 hi Typedef         guifg=#66D9EF
@@ -114,14 +111,11 @@ hi WildMenu        guifg=#66D9EF guibg=#000000
 hi TabLineFill     guifg=#1B1D1E guibg=#1B1D1E
 hi TabLine         guibg=#1B1D1E guifg=#808080 gui=none
 
-hi CurSearch       guifg=#005f00 guibg=#afdf00 gui=bold
-
 hi TroubleCount    guibg=#F7A41D guifg=#000000
 hi TroubleIndent   guibg=none    guifg=#465457
 hi NvimTreeLineNr  guibg=#1B1D1E
 
 hi CursorLineFold  guibg=NONE
-" hi! link IncSearch CurSearch
 
 if s:molokai_original == 1
    hi Normal          guifg=#F8F8F2 guibg=#272822
@@ -130,21 +124,16 @@ if s:molokai_original == 1
    hi CursorLineNr    guifg=#FD971F               gui=none
    hi CursorColumn                  guibg=#3E3D32
    hi ColorColumn                   guibg=#3B3A32
-   " hi LineNr          guifg=#BCBCBC guibg=#3B3A32
    hi LineNr          guifg=#BCBCBC guibg=#1B1D1E
    hi NonText         guifg=#75715E
    hi SpecialKey      guifg=#75715E
 else
-   " hi Normal          guifg=#F8F8F2 guibg=#1B1D1E
-   " hi Normal          guifg=#F8F8F2 guibg=#181818
    hi Normal          guifg=#F8F8F2 guibg=#1C1C1C
    hi Comment         guifg=#7E8E91
    hi CursorLine                    guibg=#293739
    hi CursorLineNr    guifg=#FD971F               gui=none
    hi CursorColumn                  guibg=#293739
    hi ColorColumn                   guibg=#232526
-   " hi LineNr          guifg=#465457 guibg=#232526
-   " hi LineNr          guifg=#465457 guibg=#1B1D1E
    hi LineNr          guifg=#465457 guibg=#181818
    hi NonText         guifg=#465457
    hi SpecialKey      guifg=#465457
@@ -240,8 +229,7 @@ if &t_Co > 255
 
    hi VertSplit       ctermfg=244 ctermbg=232   cterm=bold
    hi VisualNOS                   ctermbg=238
-   " hi Visual                      ctermbg=235
-   hi Visual                        ctermbg=238
+   hi Visual                      ctermbg=238
    hi WarningMsg      ctermfg=231 ctermbg=238   cterm=bold
    hi WildMenu        ctermfg=81  ctermbg=16
 
@@ -292,17 +280,14 @@ if &t_Co > 255
    endif
 end
 
-" hi WinSeparator guifg=#465457
-hi WinSeparator guibg=#1b1d1e guifg=#2e2e2e
+hi WinSeparator guifg=#2E2E2E guibg=#1B1D1E
 hi! link NormalFloat Normal
 hi LspReferenceText guibg=#3C5BB1
 hi LspReferenceRead guibg=#4F5F8A
 hi LspReferenceWrite guibg=#447078
 
-hi ErlangCallback guifg=#ffc8c8
-hi ErlangBehaviour guifg=#ffc8c8
-" hi CurSearch ctermbg=238 guibg=#6638f0
-hi! link IncSearch CurSearch
+hi ErlangCallback guifg=#FFC8C8
+hi ErlangBehaviour guifg=#FFC8C8
 hi link @callback ErlangCallback
 hi link @callback_export ErlangCallback
 hi link @keyword_behaviour ErlangBehaviour
@@ -314,28 +299,22 @@ hi link @function.builtin Constant
 hi link GitSignsAdd GitSignsStagedAdd
 hi link GitSignsChange GitSignsStagedChange
 hi link GitSignsDelete GitSignsStagedDelete
-hi GitSignsUntracked guifg=#fd971f
+hi GitSignsUntracked guifg=#FD971F
 
-" hi link DiagnosticError ErrorMsg
-hi DiagnosticError guifg=#f92672
-hi DiagnosticHint guifg=#8cf8f7
+hi DiagnosticError guifg=#F92672
+hi DiagnosticHint guifg=#8CF8F7
 " hi link DiagnosticSignError ErrorMsg
 
-hi Added guifg=#afdf00 guibg=#232526
+hi Added guifg=#AFDF00 guibg=#232526
 hi Changed guifg=#4581FF guibg=#232526
 hi Removed guifg=#FF4545 guibg=#232526
 hi link GitSignsStagedAdd Added
 hi link GitSignsStagedChange Changed
 hi link GitSignsStagedDelete Removed
 
-hi TodoBgFIX gui=bold guifg=#1b1d1e guibg=red
+hi TodoBgFIX gui=bold guifg=#1B1D1E guibg=red
 hi TodoFgFiX guifg=red
 hi TodoSignFIX guifg=red
-
-" hi link TroublePreview Visual
-" hi TroubleNormalNC guibg=#1b1d1e
-" hi TroubleNormal guibg=#1b1d1e
-" hi NvimTreeNormal guibg=#1b1d1e
 
 hi! link TelescopePreviewLine IncSearch
 
