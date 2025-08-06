@@ -41,7 +41,7 @@ hi Structure       guifg=#66D9EF
 hi Define          guifg=#66D9EF
 hi Typedef         guifg=#66D9EF
 hi Type            guifg=#66D9EF               gui=none
-hi Underlined      guifg=#808080               gui=underline
+hi Underlined                                  gui=underline
 
 hi Cursor          guifg=#000000 guibg=#F8F8F0
 hi iCursor         guifg=#000000 guibg=#F8F8F0
@@ -225,7 +225,7 @@ if &t_Co > 255
 
    hi Typedef         ctermfg=81
    hi Type            ctermfg=81                cterm=none
-   hi Underlined      ctermfg=244               cterm=underline
+   hi Underlined                                cterm=underline
 
    hi VertSplit       ctermfg=244 ctermbg=232   cterm=bold
    hi VisualNOS                   ctermbg=238
