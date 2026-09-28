@@ -314,9 +314,26 @@ hi! link IlluminatedWordText   LspReferenceText
 hi! link IlluminatedWordRead   LspReferenceRead
 hi! link IlluminatedWordWrite  LspReferenceWrite
 
-hi AerialLine                  guibg=#1B3030
 hi WhichKeyBorder              guifg=#A16600
 hi DiagnosticWarn              guifg=Yellow
+
+" Aerial
+hi AerialLine                  guibg=#1B3030
+hi! link @variable              Identifier
+hi! link AerialGuide            Comment
+hi! link AerialModule           Constant
+hi! link AerialClass            Type
+hi! link AerialInterface        @attribute
+hi! link AerialStruct           Structure
+hi! link AerialClassIcon        Special
+hi! link AerialFunction         Function
+hi! link AerialField            @lsp.type.variable
+hi! link AerialTypeParameter    @lsp.type.parameter
+hi! link AerialConstant         Constant
+hi! link AerialMethod           @lsp.type.method
+hi! link AerialEnum             @lsp.type.enum
+hi! link AerialEnumMember       @lsp.type.enumMember
+hi! link AerialObject           Keyword
 
 " BlinkCmp
 
