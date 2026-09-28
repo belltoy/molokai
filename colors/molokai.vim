@@ -320,6 +320,7 @@ hi DiagnosticWarn              guifg=Yellow
 
 " BlinkCmp
 
+hi      BlinkCmpLabelMatch        guifg=#afdf64   gui=bold
 hi link BlinkCmpMenuSelection     CursorLine
 hi link BlinkCmpLabelDeprecated   DiagnosticDeprecated
 hi link BlinkCmpLabelDetail       Label
