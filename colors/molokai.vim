@@ -1,6 +1,6 @@
 " Vim color file
 "
-" Author: Tomas Restrepo <tomas@winterdom.com>
+" Original Author: Tomas Restrepo <tomas@winterdom.com>
 " https://github.com/tomasr/molokai
 "
 " Note: Based on the Monokai theme for TextMate
@@ -41,6 +41,8 @@ hi Structure       guifg=#66D9EF
 hi Define          guifg=#66D9EF
 hi Typedef         guifg=#66D9EF
 hi Type            guifg=#66D9EF               gui=none
+
+hi clear Underline
 hi Underlined                                  gui=underline
 
 hi Cursor          guifg=#000000 guibg=#F8F8F0
@@ -107,8 +109,8 @@ hi Title           guifg=#EF5939
 hi Todo            guifg=#FFFFFF guibg=bg      gui=bold
 
 hi VertSplit       guifg=#808080 guibg=#080808 gui=bold
-hi VisualNOS                     guibg=#403D3D
-hi Visual                        guibg=#403D3D
+hi VisualNOS                     guibg=#005F87
+hi Visual                        guibg=#005F87
 hi WarningMsg      guifg=#FFFFFF guibg=#333333 gui=bold
 hi WildMenu        guifg=#66D9EF guibg=#000000
 
@@ -285,10 +287,6 @@ hi! link NormalFloat Normal
 
 hi WinSeparator      guifg=#2E2E2E guibg=#1B1D1E
 
-hi LspReferenceText                guibg=#3C5BB1
-hi LspReferenceRead                guibg=#4F5F8A
-hi LspReferenceWrite               guibg=#447078
-
 hi GitSignsUntracked guifg=#FD971F
 hi link GitSignsAdd          GitSignsStagedAdd
 hi link GitSignsChange       GitSignsStagedChange
@@ -310,6 +308,133 @@ hi TroubleIndent  guifg=#465457 guibg=none
 hi NvimTreeLineNr               guibg=#1B1D1E
 
 hi! link TelescopePreviewLine IncSearch
+
+" Illuminated
+hi! link IlluminatedWordText   LspReferenceText
+hi! link IlluminatedWordRead   LspReferenceRead
+hi! link IlluminatedWordWrite  LspReferenceWrite
+
+hi AerialLine                  guibg=#1B3030
+hi WhichKeyBorder              guifg=#A16600
+hi DiagnosticWarn              guifg=Yellow
+
+" BlinkCmp
+
+hi link BlinkCmpMenuSelection     CursorLine
+hi link BlinkCmpLabelDeprecated   DiagnosticDeprecated
+hi link BlinkCmpLabelDetail       Label
+hi link BlinkCmpLabelDescription  Comment
+hi link BlinkCmpSource            PmenuExtra
+hi link BlinkCmpKind              PmenuKind
+hi link BlinkCmpKindText          @lsp.type.string
+hi link BlinkCmpKindMethod        @lsp.type.method
+hi link BlinkCmpKindFunction      @lsp.type.function
+hi link BlinkCmpKindConstructor   @constructor
+hi link BlinkCmpKindField         @lsp.type.variable
+hi link BlinkCmpKindVariable      @lsp.type.variable
+hi link BlinkCmpKindClass         @lsp.type.class
+hi link BlinkCmpKindInterface     @lsp.type.interface
+hi link BlinkCmpKindModule        @lsp.type.namespace
+hi link BlinkCmpKindProperty      @lsp.type.property
+hi link BlinkCmpKindUnit          @lsp.type.enum
+hi link BlinkCmpKindValue         @lsp.type.variable
+hi link BlinkCmpKindEnum          @lsp.type.enum
+hi link BlinkCmpKindKeyword       @lsp.type.keyword
+" hi link BlinkCmpKindSnippet xxx links to BlinkCmpKind
+" hi link BlinkCmpKindColor xxx links to BlinkCmpKind
+hi link BlinkCmpKindFile          @label
+hi link BlinkCmpKindReference     LspReferenceText
+hi link BlinkCmpKindFolder        Directory
+hi link BlinkCmpKindEnumMember    @lsp.type.enumMember
+hi link BlinkCmpKindConstant      @constant
+hi link BlinkCmpKindStruct        @lsp.type.struct
+hi link BlinkCmpKindEvent         @lsp.type.event
+hi link BlinkCmpKindOperator      @lsp.type.operator
+hi link BlinkCmpKindTypeParameter @lsp.type.parameter
+" hi link BlinkCmpScrollBarThumb xxx links to PmenuThumb
+" hi link BlinkCmpScrollBarGutter xxx links to PmenuSbar
+" hi link BlinkCmpGhostText xxx links to NonText
+" hi link BlinkCmpMenu   xxx links to Pmenu
+" hi link BlinkCmpMenuBorder xxx links to Pmenu
+hi link BlinkCmpMenuBorder        Comment
+hi link BlinkCmpDocBorder         Comment
+
+" Markdown
+hi MarkDownTitle                      guifg=#C84A30 gui=bold
+
+hi @markup.raw.markdown_inline        guifg=#489DAD
+hi @markup.link.label.markdown_inline guifg=#2758FE
+hi RenderMarkdownH1                   gui=bold guifg=#C84A30
+hi RenderMarkdownH1Bg                 ctermfg=0 ctermbg=11 gui=bold guifg=#005f00 guibg=#afdf00
+hi link @markup.heading.1.markdown MarkDownTitle
+hi link @markup.heading.2.markdown MarkDownTitle
+hi link @markup.heading.3.markdown MarkDownTitle
+hi link @markup.heading.4.markdown MarkDownTitle
+hi link @markup.heading.5.markdown MarkDownTitle
+hi link @markup.heading.6.markdown MarkDownTitle
+
+" Languages
+"
+hi link @macro.edoc Comment
+
+hi link @variable.prom    Identifier
+hi link @constructor.prom Function
+hi link @type.prom        Debug
+hi link @label.prom       Type
+
+hi link @variable.openmetrics @variable.prom
+hi link @constructor.openmetrics @constructor.prom
+hi link @type.openmetrics @type.prom
+hi link @label.openmetrics @label.prom
+
+hi! link @string.special.path.dockerfile @diff.delta
+hi! link @string.special.path.src.dockerfile @diff.delta
+hi! link @string.special.path.dst.dockerfile @diff.plus
+hi! link @string.special.image.name.dockerfile @constant
+hi! link @string.special.image.tag.dockerfile @label
+hi! link @string.special.image.alias.dockerfile @constant
+
+hi! link @property.table_name.toml  Constant
+
+hi! link @type.comment.prom         NonText
+hi! link @type.comment.openmetrics  NonText
+
+hi! link @function.deprecated.erlang  DiagnosticDeprecated
+hi! link @attribute @boolean
+hi! link @tag.attribute @attribute
+hi! link @tag.attribute.heex @attribute
+hi! link @tag @keyword
+hi! link @tag.html @tag
+hi! link @tag.heex @tag
+
+hi  link @string.document Comment
+hi! link @string.documentation @string.document
+hi! link @string.html String
+hi! link @string.heex @string.html
+
+hi link @macro.edoc Comment
+
+hi link @variable.prom    Identifier
+hi link @constructor.prom Function
+hi link @type.prom        Debug
+hi link @label.prom       Type
+
+hi link @variable.openmetrics @variable.prom
+hi link @constructor.openmetrics @constructor.prom
+hi link @type.openmetrics @type.prom
+hi link @label.openmetrics @label.prom
+
+" lsp
+hi LspReferenceWrite           gui=none guibg=#5C7B36
+hi LspReferenceRead            gui=none guibg=#3C5BB1
+hi LspReferenceText            gui=none guibg=#3333FF
+
+hi! @lsp.typemod.string.injected.rust guifg=#A16600
+hi  @lsp.typemod.function.documentation.rust guifg=#91B444
+hi! link @lsp.typemod.string.documentation @string.document
+hi  link @lsp.typemod.property.declaration.typescript @attribute
+hi  link @lsp.typemod.property.declaration @attribute
+hi  link jsxAttrib @attribute
 
 " Must be at the end, because of ctermbg=234 bug.
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
