@@ -91,7 +91,7 @@ hi Search          guifg=#000000 guibg=#FFE792
 hi CurSearch       guifg=#005F00 guibg=#AFDF00 gui=bold
 
 " marks
-hi SignColumn      guifg=#A6E22E guibg=#181818
+hi SignColumn      guifg=#A6E22E guibg=none
 hi SpecialChar     guifg=#F92672               gui=bold
 hi SpecialComment  guifg=#7E8E91               gui=bold
 hi Special         guifg=#66D9EF               gui=none
@@ -136,7 +136,7 @@ else
    hi CursorLineNr    guifg=#FD971F               gui=none
    hi CursorColumn                  guibg=#293739
    hi ColorColumn                   guibg=#232526
-   hi LineNr          guifg=#465457 guibg=#181818
+   hi LineNr          guifg=#465457 guibg=none
    hi NonText         guifg=#465457
    hi SpecialKey      guifg=#465457
 end
@@ -285,7 +285,7 @@ end
 hi! link IncSearch CurSearch
 hi! link NormalFloat Normal
 
-hi WinSeparator      guifg=#2E2E2E guibg=#1B1D1E
+hi WinSeparator      guifg=#2E2E2E guibg=none
 
 hi GitSignsUntracked guifg=#FD971F
 hi link GitSignsAdd          GitSignsStagedAdd
@@ -318,7 +318,7 @@ hi WhichKeyBorder              guifg=#A16600
 hi DiagnosticWarn              guifg=Yellow
 
 " Aerial
-hi AerialLine                  guibg=#1B3030
+hi AerialLine                  guibg=#1B6060
 hi! link @variable              Identifier
 hi! link AerialGuide            Comment
 hi! link AerialModule           Constant
