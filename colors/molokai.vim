@@ -94,7 +94,7 @@ hi CurSearch       guifg=#005F00 guibg=#AFDF00 gui=bold
 hi SignColumn      guifg=#A6E22E guibg=none
 hi SpecialChar     guifg=#F92672               gui=bold
 hi SpecialComment  guifg=#7E8E91               gui=bold
-hi Special         guifg=#66D9EF               gui=none
+hi Special         guifg=#66D9EF               gui=bold
 
 if has("spell")
     hi SpellBad    guisp=#FF0000 gui=undercurl
@@ -104,7 +104,7 @@ if has("spell")
 endif
 hi StatusLine      guifg=#455354 guibg=fg
 hi StatusLineNC    guifg=#808080 guibg=#080808
-hi Tag             guifg=#F92672               gui=italic
+hi Tag             guifg=#A6E22e
 hi Title           guifg=#EF5939
 hi Todo            guifg=#FFFFFF guibg=bg      gui=bold
 
@@ -453,6 +453,11 @@ hi! link @lsp.typemod.string.documentation @string.document
 hi  link @lsp.typemod.property.declaration.typescript @attribute
 hi  link @lsp.typemod.property.declaration @attribute
 hi  link jsxAttrib @attribute
+
+hi link @tag Tag
+hi link @tag.special Special
+hi link @tag.attribute.special Keyword
+hi link @lsp.type.component.vue Type
 
 " Must be at the end, because of ctermbg=234 bug.
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
